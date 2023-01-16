@@ -1,9 +1,7 @@
-'use strict'
-
-const statuses = require('../lib/statuses')
-const supported = require('../lib/supported')
-const browsers = require('./browsers').browsers
-const versions = require('./browserVersions').browserVersions
+import statuses from "../lib/statuses.js"
+import supported from "../lib/supported.js"
+import browsers from "./browsers.js"
+import versions from "./browserVersions.js"
 
 const MATH2LOG = Math.log(2)
 
@@ -26,7 +24,7 @@ function unpackSupport(cipher) {
   return stats.concat(notesArray).join(' ')
 }
 
-function unpackFeature(packed) {
+export default function unpackFeature(packed) {
   let unpacked = { status: statuses[packed.B], title: packed.C }
   unpacked.stats = Object.keys(packed.A).reduce((browserStats, key) => {
     let browser = packed.A[key]
@@ -43,6 +41,3 @@ function unpackFeature(packed) {
   }, {})
   return unpacked
 }
-
-module.exports = unpackFeature
-module.exports.default = unpackFeature

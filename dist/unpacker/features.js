@@ -3,4 +3,5 @@
  * doesn't appear in the rollup bundle.
  */
 
-module.exports.features = require('../../data/features')
+import features from "../../data/features.js"
+export default features

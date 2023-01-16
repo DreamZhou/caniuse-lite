@@ -1,1 +1,2 @@
-module.exports.browserVersions = require('../../data/browserVersions')
+import browserVersions from '../../data/browserVersions.js'
+export default browserVersions

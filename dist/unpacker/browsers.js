@@ -1,1 +1,2 @@
-module.exports.browsers = require('../../data/browsers')
+import browsers from "../../data/browsers.js"
+export default browsers

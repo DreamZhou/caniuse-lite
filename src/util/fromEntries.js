@@ -9,4 +9,4 @@ const fromEntries = pairs => {
   return output
 }
 
-module.exports = fromEntries
+export default fromEntries

@@ -1,4 +1,4 @@
-module.exports.agents = require('./agents').agents
-module.exports.feature = require('./feature')
-module.exports.features = require('./features').features
-module.exports.region = require('./region')
+export { agents } from "./agents.js"
+export { default as feature } from "./feature.js"
+export { default as features } from "./features.js"
+export { default as region } from "./region.js"

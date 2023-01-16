@@ -1,12 +1,10 @@
-'use strict'
+import browsers from "./browsers.js"
 
-const browsers = require('./browsers').browsers
-
-function unpackRegion(packed) {
+export default function unpackRegion(packed) {
   return Object.keys(packed).reduce((list, browser) => {
-    let data = packed[browser]
+    const data = packed[browser]
     list[browsers[browser]] = Object.keys(data).reduce((memo, key) => {
-      let stats = data[key]
+      const stats = data[key]
       if (key === '_') {
         stats.split(' ').forEach(version => (memo[version] = null))
       } else {
@@ -17,6 +15,3 @@ function unpackRegion(packed) {
     return list
   }, {})
 }
-
-module.exports = unpackRegion
-module.exports.default = unpackRegion

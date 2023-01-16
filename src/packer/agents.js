@@ -1,5 +1,6 @@
-const path = require('path')
-const fs = require('fs').promises
+import { path } from "../../deps_dev.ts";
+import { fs as Fs } from "../../deps_dev.ts";
+const { fs } = Fs;
 
 const stringifyObject = require('../lib/stringifyObject')
 const browsersData = require('../../data/browsers')

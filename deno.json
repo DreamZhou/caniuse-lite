@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "lib": [
+            "es2020",
+            "deno.window"
+        ],
+        "strict": true
+    },
+    "lint": {
+        "rules": {
+            "exclude": []
+        }
+    }
+}

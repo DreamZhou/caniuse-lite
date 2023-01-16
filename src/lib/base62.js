@@ -1,5 +1,4 @@
-const sum = require('../util/sum')
-
+import { sum } from "../util/sum.js"
 const characters =
   'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
 
@@ -21,4 +20,4 @@ function decode(base62) {
   )
 }
 
-module.exports = { encode, decode }
+export { encode, decode }

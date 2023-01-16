@@ -1,8 +1,7 @@
-'use strict'
+import browsers from "./browsers.js"
+import versions from "./browserVersions.js"
 
-const browsers = require('./browsers').browsers
-const versions = require('./browserVersions').browserVersions
-const agentsData = require('../../data/agents')
+import agentsData from "../../data/agents.js"
 
 function unpackBrowserVersions(versionsData) {
   return Object.keys(versionsData).reduce((usage, version) => {
@@ -11,7 +10,7 @@ function unpackBrowserVersions(versionsData) {
   }, {})
 }
 
-module.exports.agents = Object.keys(agentsData).reduce((map, key) => {
+export const agents = Object.keys(agentsData).reduce((map, key) => {
   let versionsData = agentsData[key]
   map[browsers[key]] = Object.keys(versionsData).reduce((data, entry) => {
     if (entry === 'A') {
