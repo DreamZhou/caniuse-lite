@@ -16,7 +16,7 @@ function getBrowsers({ data }) {
   )
 }
 
-module.exports = () =>
+export default () =>
   fs.writeFile(
     path.join(__dirname, '..', '..', 'data', 'browsers.js'),
     getBrowsers(require('caniuse-db/data.json'))

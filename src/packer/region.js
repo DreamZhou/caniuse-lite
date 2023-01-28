@@ -16,7 +16,7 @@ const base = path.join(
 
 const getContents = getContentsFactory(base)
 
-module.exports = async function packRegion() {
+export default async function packRegion() {
   let regions = await fs.readdir(base).then(getContents)
 
   return Promise.all(

@@ -44,5 +44,5 @@ function unpackFeature(packed) {
   return unpacked
 }
 
-module.exports = unpackFeature
+export default unpackFeature
 module.exports.default = unpackFeature

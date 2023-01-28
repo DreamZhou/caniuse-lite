@@ -50,7 +50,7 @@ function packSupport(supportData) {
   )
 }
 
-module.exports = async function packFeature() {
+export default async function packFeature() {
   let features = await fs.readdir(base).then(getContents)
 
   await Promise.all(

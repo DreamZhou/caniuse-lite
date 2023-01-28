@@ -18,5 +18,5 @@ function unpackRegion(packed) {
   }, {})
 }
 
-module.exports = unpackRegion
+export default unpackRegion
 module.exports.default = unpackRegion

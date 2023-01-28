@@ -21,4 +21,4 @@ function decode(base62) {
   )
 }
 
-module.exports = { encode, decode }
+export default { encode, decode }

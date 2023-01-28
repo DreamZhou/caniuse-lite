@@ -8,4 +8,4 @@ function invertObj(object) {
   return result
 }
 
-module.exports = invertObj
+export default invertObj

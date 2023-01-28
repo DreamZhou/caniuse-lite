@@ -7,4 +7,4 @@ function generateCode(programStatements) {
   return `${code}\n`
 }
 
-module.exports = generateCode
+export default generateCode

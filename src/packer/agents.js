@@ -80,7 +80,7 @@ function getAgents(data) {
   return JSON.parse(data).agents
 }
 
-module.exports = async function packAgents() {
+export default async function packAgents() {
   // We're not requiring the JSON because it nukes the null values
   let [[agents, browserVersions], fullAgents] = await Promise.all([
     fs

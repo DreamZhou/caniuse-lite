@@ -8,4 +8,4 @@ function sum(numbers) {
   return result
 }
 
-module.exports = sum
+export default sum
