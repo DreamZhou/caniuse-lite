@@ -10,4 +10,4 @@ function moduleExports(expression) {
   )
 }
 
-module.exports = moduleExports
+export default moduleExports

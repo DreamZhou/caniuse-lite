@@ -36,4 +36,4 @@ function stringify(data) {
   return generateCode([moduleExports(stringifyRecursive(data))])
 }
 
-module.exports = stringify
+export default stringify
